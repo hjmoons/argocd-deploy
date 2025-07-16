@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: myapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: ghcr.io/hjmoons/todo-app-backend:latest
+          ports:
+            - containerPort: 8080
+              name: backend-port
+          resources:
+            requests:
+              memory: "100Mi"
+            limits:
+              memory: "250Mi"
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: prd
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: demo-config
+                  key: DB_HOST
+            - name: DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: demo-config
+                  key: DB_PORT
+            - name: DB_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: demo-config
+                  key: DB_NAME
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: demo-secret
+                  key: DB_USERNAME
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: demo-secret
+                  key: DB_PASSWORD

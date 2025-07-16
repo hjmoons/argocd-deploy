@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: myapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: ghcr.io/hjmoons/todo-app-frontend:latest
+          ports:
+            - containerPort: 8080
+              name: frontend-port
+          resources:
+            requests:
+              memory: "100Mi"
+            limits:
+              memory: "250Mi"
