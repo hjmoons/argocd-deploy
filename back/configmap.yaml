@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-cm
+  namespace: myapp
+data:
+  SPRING_PROFILES_ACTIVE: "prd"
