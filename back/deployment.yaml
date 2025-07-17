@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ghcr.io/hjmoons/myapp-backend:7e03401016fe57809cfa2b240830f1beb4f652c1
+          image: ghcr.io/hjmoons/myapp-backend:17aada9063cb08847e23a098b264e6ab78deb90e
           ports:
             - containerPort: 8080
               name: backend-port
