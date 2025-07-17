@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ghcr.io/hjmoons/todo-app-backend:7e03401016fe57809cfa2b240830f1beb4f652c1
+          image: ghcr.io/hjmoons/myapp-backend:7e03401016fe57809cfa2b240830f1beb4f652c1
           ports:
             - containerPort: 8080
               name: backend-port
