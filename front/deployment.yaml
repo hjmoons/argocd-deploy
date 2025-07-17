@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ghcr.io/hjmoons/myapp-frontend:latest
+          image: ghcr.io/hjmoons/myapp-frontend:1b93433bea2d8bf47478e50fcba9564cd264d65a
           ports:
             - containerPort: 8080
               name: frontend-port
