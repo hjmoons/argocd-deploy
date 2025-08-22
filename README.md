@@ -92,8 +92,8 @@ git push origin main
 
 ### 애플리케이션
 - **백엔드**: Spring Boot 3.x, Gradle, Java 17
-- **프론트엔드**: React 18, JavaScript ES6+
-- **데이터베이스**: H2 (개발), PostgreSQL (운영)
+- **프론트엔드**: React 19.1.0, JavaScript ES6+
+- **데이터베이스**: PostgreSQL
 
 ### DevOps 도구
 - **CI**: GitHub Actions
@@ -103,7 +103,7 @@ git push origin main
 - **Ingress**: NGINX Ingress Controller
 
 ### 홈랩 인프라
-- **k3s 클러스터**: 3노드 (마스터 1, 워커 2)
+- **k3s 클러스터**: 3노드 (마스터 1, 워커 1)
 - **네트워킹**: Flannel CNI
 
 
@@ -152,7 +152,7 @@ git push origin main
 - **워커 노드 1**: 2core, 2GB RAM  
 
 ### 설치된 컴포넌트
-- **Kubernetes**: v1.31+
+- **Kubernetes**: v1.32+
 - **ArgoCD**: v3.0.6+
 
 ## 💡 학습 성과
@@ -176,7 +176,7 @@ git push origin main
 ## 🚀 실행 방법
 
 ### 전제 조건
-- Kubernetes 클러스터 (v1.31+)
+- Kubernetes 클러스터 (v1.32+)
 - ArgoCD 설치 및 설정
 - GitHub 계정 및 Container Registry 접근 권한
 
